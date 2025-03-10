@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.fgColor,
     this.borderColor,
+    this.radius = 10,
   });
 
   final String text;
@@ -21,6 +22,7 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final double? height;
   final double? width;
+  final double radius;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class CustomButton extends StatelessWidget {
                 ? BorderSide(color: borderColor ?? AppColors.primaryColor)
                 : BorderSide.none,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10))),
+                borderRadius: BorderRadius.circular(radius))),
         child: Text(
           text,
           style: getBodyTextStyle(color: fgColor ?? AppColors.whiteColor),

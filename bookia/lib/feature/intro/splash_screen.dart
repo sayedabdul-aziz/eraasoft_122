@@ -3,6 +3,7 @@ import 'package:bookia/core/constants/constants.dart';
 import 'package:bookia/core/extenstions/navigation.dart';
 import 'package:bookia/core/services/local_storage.dart';
 import 'package:bookia/core/utils/text_styles.dart';
+import 'package:bookia/core/widgets/bottom_nav_bar.dart';
 import 'package:bookia/feature/home/presentation/page/home_screen.dart';
 import 'package:bookia/feature/intro/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(const Duration(seconds: 3), () {
       if (token != null) {
-        context.pushReplacement(HomeScreen());
+        context.pushReplacement(MainAppScreen());
       } else {
         context.pushReplacement(WelcomeScreen());
       }

@@ -22,7 +22,7 @@ TextStyle getBodyTextStyle({double? fontSize, Color? color}) {
   return TextStyle(
     fontFamily: AppConstants.fontFamily,
     color: color ?? AppColors.darkColor,
-    fontSize: fontSize ?? 20,
+    fontSize: fontSize ?? 18,
   );
 }
 

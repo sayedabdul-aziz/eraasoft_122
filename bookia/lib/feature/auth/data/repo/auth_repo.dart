@@ -36,6 +36,7 @@ class AuthRepo {
         return null;
       }
     } on Exception catch (e) {
+      log(e.toString());
       return null;
     }
   }
